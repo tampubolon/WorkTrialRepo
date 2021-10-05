@@ -28,6 +28,19 @@ pipeline{
 				sh 'docker push mar3tin8/jenkins:${BUILD_NUMBER}'
 			}
 		}
+		
+		stage ('Deploy to Kubernetes') {
+     			steps {
+            			script {
+					kubernetesDeploy(
+					    configs: 'deployment.yaml',
+					    kubeconfigId: 'kube_cred',
+					    enableConfigSubstitution: true
+					)           
+            			}
+        		}
+    		}
+		
 	}
 
 	post {
