@@ -1,5 +1,5 @@
 # WorkTrialRepo
-WorkTrialRepo as junior infrastructure engineer
+WorkTrialRepo as a junior infrastructure engineer
 
 
 
